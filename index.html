@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="theme-color" content="#eff8eb">
+<title>Wildwood Zoo — Tiny Park Tycoon</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="game">
+  <canvas id="world" aria-label="Isometric zoo world game"></canvas>
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">🌿</div><div><strong>WILDWOOD</strong><small>zoo & wildlife park</small></div></div>
+    <div class="stats">
+      <div class="stat cash"><span class="stat-icon">🪙</span><div><small>CASH</small><b id="cash">$1,250</b></div><i id="income">+$0/min</i></div>
+      <div class="stat guests"><span class="stat-icon">🎟️</span><div><small>GUESTS</small><b id="guests">12</b></div></div>
+      <div class="stat rating"><span class="stat-icon">⭐</span><div><small>HAPPY</small><b id="happiness">78%</b></div></div>
+    </div>
+    <button class="icon-btn sound-btn" id="sound" aria-label="Toggle sound">🔊</button>
+  </header>
+  <section class="mission" id="mission"><span class="mission-icon">🧭</span><div><small>YOUR FIRST MISSION</small><b id="missionText">Welcome to Wildwood!</b></div><span class="mission-progress" id="missionProgress">0 / 1</span></section>
+  <div class="world-hint" id="hint">TAP AN EMPTY TILE TO BUILD</div>
+  <aside class="build-panel" id="buildPanel">
+    <div class="panel-head"><div><small>BUILD YOUR PARK</small><h2>Park shop</h2></div><button id="closeShop" class="close-btn" aria-label="Close shop">×</button></div>
+    <div class="tabs"><button class="tab active" data-tab="habitats">🐾 Habitats</button><button class="tab" data-tab="amenities">🍦 Amenities</button><button class="tab" data-tab="decor">🌳 Decor</button></div>
+    <div class="shop-items" id="shopItems"></div>
+    <div class="selected-note" id="selectedNote">Choose an item, then tap a clear spot in your zoo.</div>
+  </aside>
+  <div class="action-bar">
+    <button class="action-btn active" id="buildToggle"><span>🛠️</span><b>Build</b></button>
+    <button class="action-btn" id="inspectToggle"><span>👆</span><b>Inspect</b></button>
+    <button class="action-btn" id="feedBtn"><span>🥕</span><b>Feed</b></button>
+    <button class="action-btn" id="expandBtn"><span>🗺️</span><b>Expand</b><em>$500</em></button>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modalBackdrop"><div class="modal" id="modal"></div></div>
+  <div class="mobile-tip" id="mobileTip">🌱 Tap a tile to start building your zoo!</div>
+</main>
+<script src="game.js"></script>
+</body></html>
